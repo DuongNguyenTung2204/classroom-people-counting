@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+.venv/
+venv/
+runs/
+weights/
+checkpoints/
+*.pt
+*.pth
+.DS_Store
+.idea/
+.vscode/
+dataset/
+datasets/
+data/
