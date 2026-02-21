@@ -79,20 +79,66 @@ Trong môi trường lớp học đông đúc, việc quản lý sĩ số và gi
 - Domain shift nhẹ (MAPE tăng ~17%) → khả năng tổng quát hóa ổn định.
 - Thời gian suy luận ~0.45 giây/ảnh trên GTX 1650 → khả thi triển khai thực tế (camera giám sát lớp học).
 
-## Cài đặt & Chạy project
+## 🚀 Cài đặt & Chạy Project
 
-### Yêu cầu
-- Python 3.10+
-- Ultralytics >=8.3 (hỗ trợ YOLO12 & YOLO26)
-- OpenCV, torch, ensemble_boxes, numpy, pandas
+### 1️⃣ Yêu cầu hệ thống
+
+- Python 3.10 trở lên
+- Ultralytics >= 8.3 (hỗ trợ YOLO12 & YOLO26)
+- Các thư viện: OpenCV, torch, ensemble_boxes, numpy, pandas
+
+---
+
+### 2️⃣ Clone repository
 
 ```bash
-# Clone repo
 git clone https://github.com/DuongNguyenTung2204/classroom-people-counting.git
 cd classroom-people-counting
+```
 
-# Cài đặt dependencies
+---
+
+### 3️⃣ Cài đặt dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# Chạy API
+---
+
+## 📦 Tải Checkpoint đã huấn luyện
+
+Các mô hình đã được huấn luyện sẵn được cung cấp trong **Release v1.0** của dự án.
+
+🔗 Trang Release:  
+https://github.com/DuongNguyenTung2204/classroom-people-counting/releases/tag/v1.0
+
+### ⬇️ Tải xuống trực tiếp
+
+| Model | Download |
+|-------|----------|
+| YOLO12x (CLAHE) | [yolo12x_CLAHE_v0.pt](https://github.com/DuongNguyenTung2204/classroom-people-counting/releases/download/v1.0/yolo12x_CLAHE_v0.pt) |
+| YOLO26x P2 | [yolo26x_p2_v0_800.pt](https://github.com/DuongNguyenTung2204/classroom-people-counting/releases/download/v1.0/yolo26x_p2_v0_800.pt) |
+
+---
+
+### 📂 Cấu trúc thư mục sau khi tải model
+
+Sau khi tải về, đặt các file checkpoint vào thư mục `ckpts/` theo cấu trúc sau:
+
+```
+classroom-people-counting/
+└── ckpts/
+    ├── yolo12x_CLAHE_v0.pt
+    └── yolo26x_p2_v0_800.pt
+```
+
+---
+
+### 4️⃣ Chạy ứng dụng
+
+```bash
 python main.py
+```
+
+Sau khi khởi chạy, hệ thống sẽ sử dụng các checkpoint đã tải để thực hiện inference hoặc các tác vụ được cấu hình trong project.
