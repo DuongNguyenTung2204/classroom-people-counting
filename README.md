@@ -98,9 +98,14 @@ cd classroom-people-counting
 
 ---
 
-### 3️⃣ Cài đặt dependencies
+### 3️⃣ Tạo virtual environment & cài dependencies:
 
 ```bash
+python -m venv venv
+# Windows
+.\venv\Scripts\activate
+# Linux/Mac
+# source venv/bin/activate
 pip install -r requirements.txt
 ```
 
