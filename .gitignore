@@ -7,11 +7,11 @@ venv/
 runs/
 weights/
 checkpoints/
-*.pt
-*.pth
 .DS_Store
 .idea/
 .vscode/
 dataset/
 datasets/
 data/
+ckpts/
+*.pt

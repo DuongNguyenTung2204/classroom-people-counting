@@ -9,7 +9,8 @@ import time
 import torch
 
 from config.inference_config import InferenceConfig
-from utils.utils import process_single_image, draw_detections_on_image
+from src.inference import process_single_image
+from utils.utils import draw_detections_on_image
 
 app = FastAPI(
     title="YOLO Classroom People Counter API - Ensemble",
